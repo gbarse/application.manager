@@ -7,4 +7,5 @@ import java.util.List;
 public interface ApplicationService {
     List<Application> getAllApplications();
     void saveApplication(Application application);
+    void deleteApplicationByID(long id);
 }

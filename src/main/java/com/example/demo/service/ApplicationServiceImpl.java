@@ -19,6 +19,10 @@ public class ApplicationServiceImpl implements ApplicationService {
     @Override
     public void saveApplication(Application application) {
         this.applicationRepository.save(application);
+    }
 
+    @Override
+    public void deleteApplicationByID(long id) {
+        this.applicationRepository.deleteById(id);
     }
 }
