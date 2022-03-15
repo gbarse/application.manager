@@ -8,4 +8,5 @@ public interface ApplicationService {
     List<Application> getAllApplications();
     void saveApplication(Application application);
     void deleteApplicationByID(long id);
+    Application getApplicationByID(long id);
 }

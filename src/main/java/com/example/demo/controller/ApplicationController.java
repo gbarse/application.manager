@@ -42,4 +42,13 @@ public class ApplicationController {
         this.ApplicationService.deleteApplicationByID(id);
         return "redirect:/";
     }
+
+    @GetMapping("/showFormForUpdate/{id}")
+    public String showFormForUpdate(@PathVariable (value = "id") long id,Model model) {
+        //get application from the service
+        Application application = ApplicationService.getApplicationByID(id);
+        //set application as a model attribute to pre-populate the form
+        model.addAttribute("application", application);
+        return "update_application";
+    }
 }
